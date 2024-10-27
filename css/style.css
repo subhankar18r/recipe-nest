@@ -1,0 +1,152 @@
+:root {
+  --background-color: #c9d6b1;
+  --secondary-background-color: #d9b382;
+  --button-color: #8c9a5a;
+  --font-color: #6b4f36;
+  --link-color: #ec975f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+.header img {
+  height: 40px;
+}
+.header input {
+  height: 40px;
+  width: 400px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  text-indent: 20px;
+}
+.header button {
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  background-color: var(--button-color);
+  color: #fff;
+  cursor: pointer;
+}
+.header button:hover {
+  background-color: var(--secondary-background-color);
+}
+.hero {
+  display: flex;
+  height: 400px;
+}
+.hero div {
+  width: 50%;
+}
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.hero .hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.hero .hero_content p {
+  font-size: 20px;
+}
+.hero .hero_content h1 {
+  font-size: 36px;
+  text-decoration: underline;
+  color: var(--link-color);
+  text-align: center;
+}
+.section {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+.section > h2 {
+  margin-bottom: 30px;
+}
+.categories {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 50px;
+}
+.categories > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #aaa;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: auto;
+  width: 255px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.categories > a > img {
+  height: 90px;
+  width: 90px;
+}
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9;
+}
+#search-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  display: none;
+}
+.all-recipes {
+  position: relative;
+  min-height: 300px;
+}
+.all-recipes > div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 40px;
+}
+.all-recipes > div > a {
+  text-decoration: none;
+  color: var(--font-color);
+  margin: auto;
+  max-width: 200px;
+  height: 300px;
+}
+.all-recipes > div > a > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+footer {
+  font-size: 20px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--background-color);
+}
+footer p img {
+  vertical-align: middle;
+}
