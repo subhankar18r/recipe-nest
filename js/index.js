@@ -1,7 +1,19 @@
 import { getSearch } from "./getSearch.js";
 
 const container = document.querySelector("#search-container");
-const query = "delicious";
-// console.log(container);
+// getSearch(container, "delicious");
 
-getSearch(container, query);
+const searchInput = document.querySelector("input[type=search]");
+
+searchInput.addEventListener("keydown", (e) => {
+  if (!e.target.value) return;
+  if (e.key === "Enter") {
+    location.href = `/search.html?q=${e.target.value}`;
+  }
+});
+
+window.goToSearch = function () {
+  const query = document.querySelector("input[type=search]").value;
+  if (!query) return;
+  location.href = `/search.html?q=${query}`;
+};

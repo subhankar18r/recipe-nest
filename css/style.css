@@ -21,8 +21,8 @@
   height: 40px;
 }
 .header input {
-  height: 40px;
-  width: 400px;
+  height: 100%;
+  width: 381px;
   border-radius: 15px;
   outline: none;
   border: none;
@@ -41,6 +41,20 @@
 }
 .header button:hover {
   background-color: var(--secondary-background-color);
+}
+.header .header-right {
+  display: flex;
+  gap: 20px;
+}
+.header .input-container {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  padding: 6px;
+}
+.header .input-container img {
+  opacity: 0.6;
+  cursor: pointer;
 }
 .hero {
   display: flex;
@@ -114,6 +128,7 @@
   transform: translate(-50%, -50%);
   font-size: 28px;
   display: none;
+  text-align: center;
 }
 .all-recipes {
   position: relative;
