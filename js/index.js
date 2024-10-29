@@ -1,4 +1,7 @@
+import { header } from "./components.js";
 import { getSearch } from "./getSearch.js";
+
+document.querySelector(".header").innerHTML = header();
 
 const container = document.querySelector("#search-container");
 // getSearch(container, "delicious");

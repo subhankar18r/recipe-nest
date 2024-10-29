@@ -1,4 +1,7 @@
+import { header } from "./components.js";
 import { getSearch } from "./getSearch.js";
+
+document.querySelector(".header").innerHTML = header();
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get("q") || "delicious";
 
