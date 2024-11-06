@@ -1,7 +1,8 @@
-import { header } from "./components.js";
+import { header, footer } from "./components.js";
 import { getSearch } from "./getSearch.js";
 
-document.querySelector(".header").innerHTML = header();
+document.querySelector("header").innerHTML = header();
+document.querySelector("footer").innerHTML = footer();
 
 const container = document.querySelector("#search-container");
 // getSearch(container, "delicious");

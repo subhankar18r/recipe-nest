@@ -1,6 +1,6 @@
 function header() {
   return `
-    <a href="https://subhankar18r.github.io/recipe-nest/">
+      <a href="https://subhankar18r.github.io/recipe-nest/">
         <img src="./images/transparent-logo.png" alt="recipe nest" />
       </a>
       <div class="header-right">
@@ -17,4 +17,15 @@ function header() {
     `;
 }
 
-export { header };
+function footer() {
+  return `
+      <p>made with <img src="./images/favourite.svg" /> by Subhankar</p>
+      <div>
+        <img src="./images/github.svg" alt="" />
+        <img src="./images/twitter.svg" alt="" />
+        <img src="./images/linkedin.svg" alt="" />
+      </div>
+  `;
+}
+
+export { header, footer };

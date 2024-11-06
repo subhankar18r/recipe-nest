@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header"></header>
+    <main>
+      <div id="loading">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          style="margin: auto; background: none; display: block"
+          width="100px"
+          height="100px"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="32"
+            stroke-width="8"
+            stroke="#4fa94d"
+            stroke-dasharray="50.26548245743669 50.26548245743669"
+            fill="none"
+            stroke-linecap="round"
+          >
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              repeatCount="indefinite"
+              dur="1s"
+              keyTimes="0;1"
+              values="0 50 50;360 50 50"
+            ></animateTransform>
+          </circle>
+        </svg>
+      </div>
+      <p id="search-error">Oops something went wrong!!</p>
+      <div class="recipe">
+        <h2>Recipe Name</h2>
+        <div><span></span><span></span><span></span></div>
+        <img src="./images/temp.jpg" alt="" />
+        <h4>6 servings</h4>
+        <h4>Ingredients</h4>
+        <ul>
+          <li>list 1</li>
+          <li>list 2</li>
+          <li>list 3</li>
+        </ul>
+        <h4>Instructions</h4>
+        <div>
+          <h6>Step 1:</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+            veritatis.
+          </p>
+          <h6>Step 1:</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+            veritatis.
+          </p>
+          <h6>Step 1:</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+            veritatis.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./js/recipe.js" type="module"></script>
+  </body>
+</html>

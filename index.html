@@ -8,90 +8,85 @@
   </head>
   <body>
     <header class="header"></header>
-    <section class="hero">
-      <div><img src="./images/recipe.jpg" /></div>
-      <div class="hero_content">
-        <p>Today's Special</p>
-        <a href="#">
-          <h1>How to make chicken like an italian</h1>
-        </a>
-        <p>category: dinner</p>
-      </div>
-    </section>
-    <section class="categories-container section">
-      <h2>What to cook today?</h2>
-      <div class="categories">
-        <a href="./search.html?q=breakfast">
-          <img src="./images/breakfast.jpg" />
-          <p>Breakfast</p>
-        </a>
-
-        <a href="./search.html?q=lunch">
-          <img src="./images/lunch.jpg" />
-          <p>Lunch</p>
-        </a>
-        <a href="./search.html?q=dinner">
-          <img src="./images/dinner.jpg" />
-          <p>Dinner</p>
-        </a>
-        <a href="./search.html?q=children">
-          <img src="./images/children.jpg" />
-          <p>For Children</p>
-        </a>
-        <a href="./search.html?q=snack">
-          <img src="./images/snack.jpg" />
-          <p>Snack</p>
-        </a>
-        <a href="./search.html?q=healthy">
-          <img src="./images/healthy.jpg" />
-          <p>Healthy</p>
-        </a>
-      </div>
-    </section>
-    <section class="all-recipes section">
-      <h2>Our most popular Recipes</h2>
-      <div id="search-container">
-        <div id="loading">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            style="margin: auto; background: none; display: block"
-            width="100px"
-            height="100px"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid"
-          >
-            <circle
-              cx="50"
-              cy="50"
-              r="32"
-              stroke-width="8"
-              stroke="#4fa94d"
-              stroke-dasharray="50.26548245743669 50.26548245743669"
-              fill="none"
-              stroke-linecap="round"
-            >
-              <animateTransform
-                attributeName="transform"
-                type="rotate"
-                repeatCount="indefinite"
-                dur="1s"
-                keyTimes="0;1"
-                values="0 50 50;360 50 50"
-              ></animateTransform>
-            </circle>
-          </svg>
+    <main>
+      <section class="hero">
+        <div><img src="./images/recipe.jpg" /></div>
+        <div class="hero_content">
+          <p>Today's Special</p>
+          <a href="#">
+            <h1>How to make chicken like an italian</h1>
+          </a>
+          <p>category: dinner</p>
         </div>
-        <p id="search-error">Oops something went wrong!!</p>
-      </div>
-    </section>
-    <footer>
-      <p>made with <img src="./images/favourite.svg" /> by Subhankar</p>
-      <div>
-        <img src="./images/github.svg" alt="" />
-        <img src="./images/twitter.svg" alt="" />
-        <img src="./images/linkedin.svg" alt="" />
-      </div>
-    </footer>
+      </section>
+      <section class="categories-container section">
+        <h2>What to cook today?</h2>
+        <div class="categories">
+          <a href="./search.html?q=breakfast">
+            <img src="./images/breakfast.jpg" />
+            <p>Breakfast</p>
+          </a>
+
+          <a href="./search.html?q=lunch">
+            <img src="./images/lunch.jpg" />
+            <p>Lunch</p>
+          </a>
+          <a href="./search.html?q=dinner">
+            <img src="./images/dinner.jpg" />
+            <p>Dinner</p>
+          </a>
+          <a href="./search.html?q=children">
+            <img src="./images/children.jpg" />
+            <p>For Children</p>
+          </a>
+          <a href="./search.html?q=snack">
+            <img src="./images/snack.jpg" />
+            <p>Snack</p>
+          </a>
+          <a href="./search.html?q=healthy">
+            <img src="./images/healthy.jpg" />
+            <p>Healthy</p>
+          </a>
+        </div>
+      </section>
+      <section class="all-recipes section">
+        <h2>Our most popular Recipes</h2>
+        <div id="search-container">
+          <div id="loading">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              style="margin: auto; background: none; display: block"
+              width="100px"
+              height="100px"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="xMidYMid"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="32"
+                stroke-width="8"
+                stroke="#4fa94d"
+                stroke-dasharray="50.26548245743669 50.26548245743669"
+                fill="none"
+                stroke-linecap="round"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  type="rotate"
+                  repeatCount="indefinite"
+                  dur="1s"
+                  keyTimes="0;1"
+                  values="0 50 50;360 50 50"
+                ></animateTransform>
+              </circle>
+            </svg>
+          </div>
+          <p id="search-error">Oops something went wrong!!</p>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>

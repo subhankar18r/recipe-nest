@@ -1,7 +1,8 @@
-async function getSearch(container, query) {
+async function getSearch(query) {
   try {
     document.querySelector("#loading").style.display = "block";
 
+    // if (!query) document.querySelector("#search-error").style.display = "block";
     const apiUrl = `https://api.api-ninjas.com/v1/recipe?query=${query}`;
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -12,12 +13,8 @@ async function getSearch(container, query) {
     const data = await response.json();
 
     document.querySelector("#loading").style.display = "none";
-    if (data.length > 0) pushElementToContainer(container, data);
-    else {
-      document.querySelector("#search-error").style.display = "block";
-      document.querySelector("#search-error").innerHTML =
-        "No results found, try searching something else";
-    }
+
+    return data;
   } catch (error) {
     document.querySelector("#loading").style.display = "none";
     document.querySelector("#search-error").style.display = "block";
@@ -25,10 +22,18 @@ async function getSearch(container, query) {
 }
 
 async function pushElementToContainer(container, data) {
+  if (data.length < 1) {
+    console.log(1);
+    document.querySelector("#search-error").style.display = "block";
+    document.querySelector("#search-error").innerHTML =
+      "No results found, try searching something else";
+    return;
+  }
+  console.log(2);
   Array.from(data).forEach(async (e) => {
     let imgUrl = await getImage(e.title);
     const item = document.createElement("a");
-    item.href = "#";
+    item.href = `/recipe.html?q=${e.title}`;
     item.innerHTML = `
       <img src="${imgUrl}" alt="" />
       <h3>${e.title}</h3>    
@@ -51,4 +56,4 @@ async function getImage(ingredient) {
   return data.results[0].urls.regular;
 }
 
-export { getSearch };
+export { getSearch, pushElementToContainer };

@@ -10,6 +10,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+footer {
+  margin-top: auto;
+}
 .header {
   background-color: var(--background-color);
   display: flex;
@@ -55,6 +66,9 @@
 .header .input-container img {
   opacity: 0.6;
   cursor: pointer;
+}
+footer {
+  float: bottom;
 }
 .hero {
   display: flex;
