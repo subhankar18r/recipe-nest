@@ -1,0 +1,43 @@
+.action-icons {
+  margin: 20px 0;
+  width: fit-content;
+  display: flex;
+  border-collapse: collapse;
+}
+.action-icons span {
+  border: 2px solid;
+  height: 47px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px;
+}
+.action-icons span + span {
+  border-left: none;
+}
+.recipe-img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+.servings {
+  margin: 20px 0;
+  color: #333;
+}
+.ingredients-container li {
+  list-style-position: inside;
+  padding-left: 20px;
+}
+.instruction-heading {
+  margin-top: 20px;
+}
+
+.steps > div {
+  margin-top: 20px;
+}
+.end-text {
+  margin-top: 20px;
+  font-size: 28px;
+  display: none;
+}
