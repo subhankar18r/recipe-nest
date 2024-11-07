@@ -1,11 +1,13 @@
 import { header, footer } from "./components.js";
-import { getSearch } from "./getSearch.js";
+import { getSearch, pushElementToContainer } from "./getSearch.js";
 
 document.querySelector("header").innerHTML = header();
 document.querySelector("footer").innerHTML = footer();
 
 const container = document.querySelector("#search-container");
-// getSearch(container, "delicious");
+
+const data = await getSearch("delicious");
+pushElementToContainer(container, data);
 
 const searchInput = document.querySelector("input[type=search]");
 
