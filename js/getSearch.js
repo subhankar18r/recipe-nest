@@ -32,7 +32,7 @@ async function pushElementToContainer(container, data) {
   Array.from(data).forEach(async (e) => {
     let imgUrl = await getImage(e.title);
     const item = document.createElement("a");
-    item.href = `/recipe.html?q=${e.title}`;
+    item.href = `./recipe.html?q=${e.title}`;
     item.innerHTML = `
       <img src="${imgUrl}" alt="" />
       <h3>${e.title}</h3>    

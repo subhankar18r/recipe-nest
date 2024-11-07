@@ -2,7 +2,7 @@ import { getImage } from "./getSearch.js";
 
 function header() {
   return `
-<a href="/index.html">
+<a href="./index.html">
   <img src="./images/transparent-logo.png" alt="recipe nest" />
 </a>
 <div class="header-right">
