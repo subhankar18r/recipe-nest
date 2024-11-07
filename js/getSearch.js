@@ -23,13 +23,12 @@ async function getSearch(query) {
 
 async function pushElementToContainer(container, data) {
   if (data.length < 1) {
-    console.log(1);
     document.querySelector("#search-error").style.display = "block";
     document.querySelector("#search-error").innerHTML =
       "No results found, try searching something else";
     return;
   }
-  console.log(2);
+
   Array.from(data).forEach(async (e) => {
     let imgUrl = await getImage(e.title);
     const item = document.createElement("a");
@@ -42,8 +41,8 @@ async function pushElementToContainer(container, data) {
   });
 }
 
-async function getImage(ingredient) {
-  const imageApiUrl = `https://api.unsplash.com/search/photos?query=${ingredient} food &client_id=KPW-pBVpwqE-Tzvh6e6soA2OpCC38f_uoP_4b0_4HFk&per_page=1`;
+async function getImage(title) {
+  const imageApiUrl = `https://api.unsplash.com/search/photos?query=${title} food &client_id=KPW-pBVpwqE-Tzvh6e6soA2OpCC38f_uoP_4b0_4HFk&per_page=1`;
 
   const response = await fetch(imageApiUrl, {
     method: "GET",
@@ -56,4 +55,4 @@ async function getImage(ingredient) {
   return data.results[0].urls.regular;
 }
 
-export { getSearch, pushElementToContainer };
+export { getSearch, getImage, pushElementToContainer };
