@@ -2,7 +2,7 @@ async function getSearch(query) {
   try {
     document.querySelector("#loading").style.display = "block";
 
-    // if (!query) document.querySelector("#search-error").style.display = "block";
+    if (!query) document.querySelector("#search-error").style.display = "block";
     const apiUrl = `https://api.api-ninjas.com/v1/recipe?query=${query}`;
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -29,16 +29,18 @@ async function pushElementToContainer(container, data) {
     return;
   }
 
-  Array.from(data).forEach(async (e) => {
-    let imgUrl = await getImage(e.title);
-    const item = document.createElement("a");
-    item.href = `./recipe.html?q=${e.title}`;
-    item.innerHTML = `
-      <img src="${imgUrl}" alt="" />
+  Array.from(data)
+    .splice(0, 9)
+    .forEach(async (e) => {
+      let imgUrl = await getImage(e.title);
+      const item = document.createElement("a");
+      item.href = `./recipe.html?q=${e.title}`;
+      item.innerHTML = `
+      <img src="${imgUrl}" alt="${e.title}" />
       <h3>${e.title}</h3>    
       `;
-    container.appendChild(item);
-  });
+      container.appendChild(item);
+    });
 }
 
 async function getImage(title) {

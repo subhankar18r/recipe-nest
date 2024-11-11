@@ -16,6 +16,9 @@
 .action-icons span + span {
   border-left: none;
 }
+.recipe {
+  padding: 20px;
+}
 .recipe-img {
   height: 400px;
   width: 400px;
@@ -40,4 +43,11 @@
   margin-top: 20px;
   font-size: 28px;
   display: none;
+}
+
+@media (max-width: 500px) {
+  .recipe > img {
+    height: 250px;
+    width: 250px;
+  }
 }

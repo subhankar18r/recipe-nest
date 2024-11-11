@@ -17,7 +17,6 @@ body {
 }
 main {
   flex-grow: 1;
-  padding: 20px;
 }
 footer {
   margin-top: auto;
@@ -33,20 +32,24 @@ p,
 li {
   font-size: 20px;
 }
-
+.section {
+  padding: 0 20px;
+}
 .header {
   background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
   padding: 20px;
   align-items: center;
+  gap: 20px;
+  position: relative;
+  height: 64px;
 }
-.header img {
+.header > a > img {
   height: 40px;
 }
 .header input {
-  height: 100%;
-  width: 381px;
+  width: 100%;
   border-radius: 15px;
   outline: none;
   border: none;
@@ -62,6 +65,9 @@ li {
   background-color: var(--button-color);
   color: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .header button:hover {
   background-color: var(--secondary-background-color);
@@ -71,14 +77,22 @@ li {
   gap: 20px;
 }
 .header .input-container {
+  width: 500px;
   display: flex;
   background: #fff;
   border-radius: 20px;
   padding: 6px;
+  height: 44px;
 }
 .header .input-container img {
   opacity: 0.6;
   cursor: pointer;
+}
+.header-middle {
+  flex-grow: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 footer {
   float: bottom;
@@ -86,16 +100,18 @@ footer {
 .hero {
   display: flex;
   height: 400px;
+  position: relative;
 }
 .hero div {
   width: 50%;
 }
+
 .hero img {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
-.hero .hero_content {
+.hero_content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,6 +155,7 @@ footer {
 .categories > a > img {
   height: 90px;
   width: 90px;
+  object-fit: cover;
 }
 #loading {
   position: absolute;

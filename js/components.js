@@ -5,13 +5,16 @@ function header() {
 <a href="./index.html">
   <img src="./images/transparent-logo.png" alt="recipe nest" />
 </a>
-<div class="header-right">
+<div class="header-middle">
+
   <div class="input-container">
     <input type="search" placeholder="What would you like to cook today?" />
     <img onclick="goToSearch()" src="./icons/search.svg" />
   </div>
-  <button>Favourites</button>
-  <button>Schedule</button>
+</div>
+
+<div class="header-right">
+  <button> <img src="../icons/favourite.svg">Favourites</button>
 </div>
 `;
 }
