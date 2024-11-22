@@ -5,17 +5,13 @@ function header() {
 <a href="./index.html">
   <img src="./images/transparent-logo.png" alt="recipe nest" />
 </a>
-<div class="header-middle">
 
-  <div class="input-container">
-    <input type="search" placeholder="What would you like to cook today?" />
-    <img onclick="goToSearch()" src="./icons/search.svg" />
-  </div>
+<div class="input-container">
+  <input type="search" placeholder="What would you like to cook today?" />
+  <img onclick="goToSearch()" src="./icons/search.svg" />
 </div>
 
-<div class="header-right">
-  <button> <img src="../icons/favourite.svg">Favourites</button>
-</div>
+
 `;
 }
 
@@ -46,12 +42,12 @@ async function recipe(data) {
   instructions.forEach((element, i) => {
     if (element === "") return;
     instructionChildString += `
-    <div>
-    <h6>Step ${i + 1}:</h6>
-    <p>
-      ${element}.
-    </p>
-  </div>`;
+<div>
+  <h6>Step ${i + 1}:</h6>
+  <p>
+    ${element}.
+  </p>
+</div>`;
   });
 
   return `
@@ -71,7 +67,7 @@ async function recipe(data) {
 <div class="steps">
   ${instructionChildString}
 </div>
-  `;
+`;
 }
 
 export { header, footer, recipe };

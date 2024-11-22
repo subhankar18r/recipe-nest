@@ -41,7 +41,7 @@ li {
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   position: relative;
   height: 64px;
 }
@@ -72,12 +72,12 @@ li {
 .header button:hover {
   background-color: var(--secondary-background-color);
 }
-.header .header-right {
-  display: flex;
-  gap: 20px;
+.header-right {
+  display: none;
 }
 .header .input-container {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   display: flex;
   background: #fff;
   border-radius: 20px;
@@ -88,12 +88,7 @@ li {
   opacity: 0.6;
   cursor: pointer;
 }
-.header-middle {
-  flex-grow: 1;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 footer {
   float: bottom;
 }

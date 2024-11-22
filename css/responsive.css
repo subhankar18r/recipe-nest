@@ -1,21 +1,14 @@
 @media (max-width: 1028px) {
-  .header {
-    height: 132px;
-    align-items: flex-start;
-  }
-  .header-middle {
-    bottom: 10px;
-    width: calc(100% - 40px);
-  }
-  .header-middle .input-container {
-    width: 100%;
-  }
   .categories {
     grid-template-columns: auto auto;
   }
 }
 
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: 138px;
+  }
   .hero div {
     width: 100%;
   }
@@ -46,15 +39,6 @@
 }
 
 @media (max-width: 500px) {
-  .header {
-    height: 122px;
-  }
-  .header > a > img {
-    height: 32px;
-  }
-  .header button {
-    height: 32px;
-  }
   .all-recipes > div {
     grid-template-columns: auto;
   }
